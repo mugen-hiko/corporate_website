@@ -1,0 +1,31 @@
+main:
+  index:
+    external: false
+    title: ~
+    url: ~
+  service:
+    external: false
+    title: ~
+    url: ~
+  consultant:
+    external: false
+    title: ~
+    url: ~
+  company:
+    external: false
+    title: ~
+    url: ~
+  contact:
+    external: true
+    title: 'お問い合わせ'
+    url: 'https://form.run/@mugen-hiko-contact'
+
+footer:
+  privacy:
+    external: false
+    title: ~
+    url: ~
+  site_policy:
+    external: false
+    title: ~
+    url: ~

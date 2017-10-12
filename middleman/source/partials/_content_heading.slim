@@ -1,0 +1,9 @@
+.section
+  .container
+    h1.title.is-2
+      = current_page.data.title
+
+    hr
+
+    - if block_given?
+      = yield

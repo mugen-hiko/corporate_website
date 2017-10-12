@@ -1,0 +1,27 @@
+.content
+  .field.is-grouped.is-grouped-multiline
+    .control
+      .tags.has-addons
+        span.tag.is-dark
+          | 支援対象
+        span.tag.is-primary
+          - case target
+          - when :all
+            | 全業種
+          - when :web
+            | Web系スタートアップ
+
+    .control
+      .tags.has-addons
+        span.tag.is-dark
+          | 契約形態
+        span.tag.is-primary
+          = {spot: 'スポット', advisory: '顧問'}.values_at(*contract).join(' / ')
+
+    - if defined?(gift) && gift
+      .control
+        .tags.has-addons
+          span.tag.is-dark
+            | 特典
+          span.tag.is-accent
+            = gift

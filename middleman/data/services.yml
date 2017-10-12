@@ -1,0 +1,57 @@
+small:
+  title: '小規模事業者様のIT人材不足をお助けします。'
+  menus:
+    - id: 'assessment-and-proposal'
+      name: 'IT活用診断＆提案'
+      desc: |-
+        貴社の経営環境とIT活用の現状を分析し、経営課題の解決に向けた改善策をご提案します。<br>
+        <strong>初回に限り無料でご利用いただけます。</strong>
+      ribbon: '初回無料'
+    - id: 'consultation'
+      name: 'ITお困りごと相談'
+      desc: |-
+        パソコン操作のお悩みからIT活用に関するアドバイスまで、ITに関するお困りごとなら万事ご相談承ります。
+      ribbon: ~
+    - id: 'rental-staff'
+      name: 'レンタルITスタッフ'
+      desc: |-
+        IT機器、ネットワーク、ソフトウェアなど、IT全般のセットアップや設定変更をまとめてお引き受けします。
+      ribbon: ~
+
+non_it:
+  title: 'ITを活用してさらにビジネスを加速しませんか？'
+  menus:
+    - id: 'project-support'
+      name: 'ITプロジェクト支援'
+      desc: |-
+        プロジェクト立ち上げ前の構想固めも。システム構築段階の開発ベンダとの連携も。導入後の運用設計も。すべてお任せください。
+      ribbon: ~
+    - id: 'rental-cio'
+      name: 'レンタルCIO'
+      desc: |-
+        ITの観点から経営戦略を革新する情報技術パートナとして、戦略の策定からアクションの実施まで貴社の経営を包括的にサポートします。
+      ribbon: ~
+    - id: 'department-support'
+      name: 'IT組織支援'
+      desc: |-
+        貴社IT部門の一員として共にIT組織の強化を目指し、ビジネスの成功に貢献する組織への変革をお手伝いします。
+      ribbon: ~
+
+web:
+  title: 'Webサービス開発を強く、素早く、絶え間なく。'
+  menus:
+    - id: 'rental-cto'
+      name: 'レンタルCTO'
+      desc: |-
+        ITを競争力の源泉として事業を展開するスタートアップ向けに、ステージに応じた技術マネジメントをご提供します。
+      ribbon: ~
+    - id: 'devops'
+      name: 'DevOps支援'
+      desc: |-
+        開発と運用が一体となってビジネスの成功を目指すために、組織文化の醸成や自動化ノウハウの習得をお手伝いします。
+      ribbon: ~
+    - id: 'sre'
+      name: 'SRE (Site Reliability Engineering) 支援'
+      desc: |-
+        旧来の運用チームにソフトウェア・エンジニアリングの力をプラスして、システムの信頼性を圧倒的に強化します。
+      ribbon: ~
