@@ -23,6 +23,10 @@ configure :development do
     sort_attrs: false,
     format: :html
   }
+
+  config[:builder] = {
+    indent: 2
+  }
 end
 
 configure :production do
@@ -39,5 +43,9 @@ configure :production do
     pretty: false,
     sort_attrs: false,
     format: :html
+  }
+
+  config[:builder] = {
+    indent: 0
   }
 end
