@@ -17,7 +17,7 @@ article
       class = ['section', 'service-' + (i.even? ? 'even' : 'odd')].join(' ')
     ]
       .container
-        h2.title.is-3.has-text-centered
+        h2.title.is-3.has-text-centered.is-size-4-mobile
           = menu.name
 
         = partial('partials/services/' + menu.id, locals: {menu: menu})
