@@ -83,6 +83,7 @@ module ApplicationHelpers
     end
 
     items << data.site.title
+    items << data.site.subtitle
 
     items.compact.join(' | ')
   end

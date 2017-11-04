@@ -24,7 +24,7 @@ html[
     ]
 
     title
-      = title
+      = escape_html(title)
 
     link[
       rel = 'apple-touch-icon'
@@ -66,7 +66,7 @@ html[
 
     meta[
       property = 'og:title'
-      content  = title
+      content  = escape_html(title)
     ]
     meta[
       property = 'og:type'
@@ -86,7 +86,7 @@ html[
     ]
     meta[
       property = 'og:description'
-      content  = (current_page.data.description || data.site.defaults.description)
+      content  = escape_html(current_page.data.description || data.site.defaults.description)
     ]
 
     /[if lt IE 9]
