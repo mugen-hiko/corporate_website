@@ -2,6 +2,8 @@
 title: 'Home'
 ---
 
+- content_for(:description){}
+
 article.section.hero-top
   .banner
     .container
@@ -9,7 +11,7 @@ article.section.hero-top
         | ITとWebで遥かな飛躍を
 
       h1.subtitle.is-5.has-text-light
-        = escape_html("「#{data.corporate.name}」は中小企業と個人事業主向けのIT&Web支援に特化した")
+        = escape_html("#{data.corporate.name} は中小企業と個人事業主向けのIT&Web支援に特化した")
         br
         | さいたま市を拠点とするコンサルティング会社です。
 

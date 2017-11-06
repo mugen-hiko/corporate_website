@@ -1,8 +1,8 @@
 title: '合同会社 無限飛行'
 subtitle: 'さいたま市のIT&Webコンサルティング'
 
-defaults:
-  description: '「合同会社 無限飛行」は中小企業と個人事業主向けのIT&Web支援に特化した、さいたま市を拠点とするコンサルティング会社です。ITとWebで遥かな飛躍を。'
+description: |
+  合同会社 無限飛行 は中小企業と個人事業主向けのIT&Web支援に特化した、さいたま市を拠点とするコンサルティング会社です。ITとWebで遥かな飛躍を。
 
 feature:
   font_awesome: false

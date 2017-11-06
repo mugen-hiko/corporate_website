@@ -2,6 +2,9 @@
 title: '会社情報'
 ---
 
+- content_for(:description) do
+  | #{data.corporate.name} の会社情報をご案内します。
+
 article
   = partial('partials/content_heading') do
     .content

@@ -2,6 +2,9 @@
 title: 'コンサルタント'
 ---
 
+- content_for(:description) do
+  | #{data.corporate.name} のコンサルタントをご紹介します。
+
 article
   = partial('partials/content_heading')
 
@@ -25,7 +28,7 @@ article
 
         .content
           p
-            | 大手モバイル・コンテンツ会社、大規模Webサービス運営会社のエキスパート・エンジニアを経て、#{data.corporate.name}を設立。
+            | 大手モバイル・コンテンツ会社、大規模Webサービス運営会社のエキスパート・エンジニアを経て、#{data.corporate.name} を設立。
             br
             | IT戦略立案、プロジェクト・マネジメント、Web開発＆運用支援など、ITとWebに関わる経営課題に対して幅広く対応。
             br

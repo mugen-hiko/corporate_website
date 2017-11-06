@@ -16,7 +16,7 @@ html[
     ]
     meta[
       name    = 'description'
-      content = escape_html(current_page.data.description || data.site.defaults.description)
+      content = escape_html(yield_content(:description) + data.site.description)
     ]
     meta[
       name    = 'author'
@@ -86,7 +86,7 @@ html[
     ]
     meta[
       property = 'og:description'
-      content  = escape_html(current_page.data.description || data.site.defaults.description)
+      content  = escape_html(yield_content(:description) + data.site.description)
     ]
 
     /[if lt IE 9]
