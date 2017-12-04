@@ -23,6 +23,12 @@ html[
       content = data.corporate.name
     ]
 
+    - if current_page.data.noindex
+      meta[
+        name    = 'robots'
+        content = 'noindex'
+      ]
+
     title
       = escape_html(title)
 
