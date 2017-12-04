@@ -4,10 +4,10 @@
 
 /*
   x-content-type-options: nosniff
-  x-frame-options: DENY
 
 /*.html
   x-ua-compatible: ie=edge
+  x-frame-options: DENY
 
 /*.js
   content-type: application/javascript; charset=utf-8
