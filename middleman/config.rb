@@ -9,9 +9,9 @@ activate :external_pipeline,
 
 ignore /\.swp\z/
 
-page '/*.xml',  layout: false
-page '/*.json', layout: false
-page '/*.txt',  layout: false
+[:xml, :json, :txt].each do |ext|
+  page '/*.' + ext.to_s, layout: false
+end
 
 page '/404.html', directory_index: false
 
