@@ -15,5 +15,5 @@
 /*.svg
   content-type: image/svg+xml; charset=utf-8
 
-/manifest.json
+/manifest.webmanifest
   content-type: application/manifest+json; charset=utf-8
