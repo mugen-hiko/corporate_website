@@ -39,8 +39,6 @@ configure :production do
       %r|\A[^/]+\z|
     ]
 
-  #activate :asset_host, host: '//YOURDOMAIN.cloudfront.net'
-
   config[:host] = 'https://www.mugen-hiko.co.jp/'
 
   config[:slim] = {
