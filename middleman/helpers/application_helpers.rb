@@ -76,13 +76,14 @@ module ApplicationHelpers
   def title(page_id = nil)
     items = []
 
+    items << data.site.title
+
     if page_id
       items << find_title(page_id) unless page_id.to_sym == :index
     else
       items << current_page.data.title unless current_page?(:index)
     end
 
-    items << data.site.title
     items << data.site.subtitle
 
     items.compact.join(' | ')
