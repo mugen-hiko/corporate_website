@@ -8,12 +8,3 @@
 /*.html
   x-ua-compatible: ie=edge
   x-frame-options: DENY
-
-/*.js
-  content-type: application/javascript; charset=utf-8
-
-/*.svg
-  content-type: image/svg+xml; charset=utf-8
-
-/manifest.webmanifest
-  content-type: application/manifest+json; charset=utf-8
