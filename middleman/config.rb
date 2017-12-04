@@ -15,6 +15,10 @@ page '/*.txt',  layout: false
 
 page '/404.html', directory_index: false
 
+['_headers'].each do |file|
+  import_file File.expand_path(file, app.source_dir), '/' + file
+end
+
 configure :development do
   config[:host] = 'http://localhost:3000/'
 
