@@ -1,3 +1,6 @@
 [build]
-  command = 'npm run setup && npm run clean && npm run build'
-  publish = './middleman/build'
+  command = 'make setup hugo_opt="platform=Linux-64bit" && make build'
+  publish = './hugo/public/'
+
+[build.environment]
+  NODE_VERSION = '14'

@@ -1,0 +1,67 @@
+{{ define `description` -}}
+{{ .Site.Params.corporate.name.ja }}の会社情報をご案内します。
+{{- end }}
+
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="content">
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <table class="table is-hoverable">
+              <tbody>
+                <tr>
+                  <th>
+                    社名
+                  </th>
+
+                  <td>
+                    {{ .Site.Params.corporate.name.ja }}<br>
+                    {{ .Site.Params.corporate.name.en }}
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>
+                    所在地
+                  </th>
+
+                  <td>
+                    <span class="zip-code">{{ .Site.Params.corporate.zip_code }}</span><br>
+                    {{ .Site.Params.corporate.address }}
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>
+                    設立
+                  </th>
+
+                  <td>
+                    <time>
+                      {{ dateFormat `2006年01月02日` .Site.Params.corporate.established_at }}
+                    </time>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>
+                    代表者
+                  </th>
+
+                  <td>
+                    橘田 和志
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

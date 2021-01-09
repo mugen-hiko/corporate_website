@@ -1,0 +1,21 @@
+---
+baseURL: 'https://www.mugen-hiko.co.jp/'
+
+languageCode: 'ja-jp'
+hasCJKLanguage: true
+
+enableRobotsTXT: true
+
+enableGitInfo: true
+
+taxonomies: []
+
+params:
+  contactUrl: 'https://form.run/@mugen-hiko-contact'
+  corporate:
+    name:
+      ja: '合同会社無限飛行'
+      en: 'Mugen Hiko G.K.'
+    zip_code: '338-0012'
+    address: '埼玉県さいたま市中央区大戸1-32-7-1'
+    established_at: '2017-05-19'

@@ -1,0 +1,120 @@
+<!doctype html>
+<html prefix="og: https://ogp.me/ns#">
+
+<head>
+  {{ $subtitle := `さいたま市のIT＆Webコンサルティング` }}
+  {{ $subdescription := printf `%sは中小企業と個人事業主向けのIT＆Web支援に特化した、さいたま市を拠点とするコンサルティング会社です。ITとWebで遥かな飛躍を。` .Site.Params.corporate.name.ja }}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {{ with .Params.noindex }}
+  <meta name="robots" content="noindex">
+  {{ end }}
+
+  <title>
+    {{ .Site.Params.corporate.name.ja }} | {{ .Title }} | {{ $subtitle }}
+  </title>
+
+  <meta name="description" content="{{ block `description` . }}{{ end }}{{ $subdescription }}">
+
+  <meta name="twitter:card" content="summary">
+
+  {{ if .IsHome }}
+  <meta property="og:type" content="website">
+  {{ else }}
+  <meta property="og:type" content="article">
+  {{ end }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Params.corporate.name.ja }} | {{ $subtitle }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ block `description` . }}{{ end }}{{ $subdescription }}">
+  <meta property="og:image" content="{{ partial `resource.html` (dict `file` `og-image.png`) | absURL }}">
+
+  <link rel="stylesheet" href="{{ partial `resource.html` (dict `file` `main.css` `template` .) }}">
+
+  <link rel="icon" href="{{ partial `resource.html` (dict `file` `favicon.ico`) }}">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar has-shadow is-transparent is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{{ relref . `/` }}">
+            <img class="logo" src="{{ partial `resource.html` (dict `file` `logo.svg`) }}" alt="{{ .Site.Params.corporate.name.ja }}">
+          </a>
+
+          <a class="navbar-burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <a class="navbar-item is-tab {{ if $currentPage.IsMenuCurrent `main` . }}is-active{{ end }}" href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+            {{ end }}
+
+            <a class="navbar-item is-tab" href="{{ .Site.Params.contactUrl }}">
+              お問い合わせ
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  {{ block `main` . }}{{ end }}
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-2">
+          <a href="{{ relref . `/` }}">
+            <img class="logo" src="{{ partial `resource.html` (dict `file` `logo-invert.svg`) }}" alt="{{ .Site.Params.corporate.name.ja }}">
+          </a>
+        </div>
+
+        <div class="column is-7">
+          <p>
+            {{ .Site.Params.corporate.name.ja }}
+          </p>
+
+          <p>
+            <span class="zip-code">{{ .Site.Params.corporate.zip_code }}</span> {{ .Site.Params.corporate.address }}
+          </p>
+        </div>
+
+        <div class="column is-3">
+          <ul>
+            {{ range .Site.Menus.footer }}
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+
+      <p class="has-text-centered">
+        <small>
+          &copy; 2017-2021 {{ .Site.Params.corporate.name.en }}
+        </small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="{{ partial `resource.html` (dict `file` `main.js`) }}"></script>
+</body>
+
+</html>

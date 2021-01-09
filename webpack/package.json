@@ -1,0 +1,32 @@
+{
+  "name": "corporate-website",
+  "version": "1.0.0",
+  "description": "Mugen Hiko G.K. corporate website.",
+  "private": true,
+  "scripts": {
+    "build-dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Mugen Hiko G.K.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "bulma": "^0.9.1",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^10.1.0",
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependenciesMeta": {
+    "bulma@0.9.1": {
+      "unplugged": true
+    }
+  }
+}

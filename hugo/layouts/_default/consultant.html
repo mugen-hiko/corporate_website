@@ -1,0 +1,38 @@
+{{ define `description` -}}
+{{ .Site.Params.corporate.name.ja }}のコンサルタントをご紹介します。
+{{- end }}
+
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section cover-consultant-detail"></section>
+
+  <section>
+    <header class="section">
+      <div class="container">
+        {{ partial `h.html` (dict `size` 2 `title` `橘田 和志 <span class="is-size-5 is-size-6-mobile">キッタ カズシ</span>`) }}
+
+        <p class="subtitle is-5 mt-6">
+          代表 / 中小企業診断士
+        </p>
+      </div>
+    </header>
+
+    <section class="section pt-0">
+      <div class="container">
+        {{ partial `h.html` (dict `size` 3 `title` `経歴`) }}
+
+        <div class="content">
+          <p>
+            大手モバイル・コンテンツ会社、大規模Webサービス運営会社のエキスパート・エンジニアを経て、{{ .Site.Params.corporate.name.ja }}を設立。<br>
+            IT戦略立案、プロジェクト・マネジメント、Web開発＆運用支援など、ITとWebに関わる経営課題に対して幅広く対応。<br>
+            技術領域の専門はDevOps、SRE (Site Reliability Engineering) およびITサービス・マネジメント。<br>
+            特にLinuxを用いた大規模Webサービスを得意とする。
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+</article>
+{{ end }}

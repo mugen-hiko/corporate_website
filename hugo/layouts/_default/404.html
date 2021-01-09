@@ -1,0 +1,21 @@
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="content">
+        <p>
+          お探しのページは移動したか削除された可能性があります。
+        </p>
+
+        <p class="has-text-centered mt-6">
+          <a class="button is-medium is-primary is-outlined" href="{{ relref . `/` }}">
+            トップへ戻る
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

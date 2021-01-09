@@ -1,0 +1,11 @@
+<div class="control">
+  <div class="tags has-addons">
+    <span class="tag is-dark">
+      {{ .key }}
+    </span>
+
+    <span class="tag {{ cond (eq .accent true) `is-accent` `is-primary` }}">
+      {{ .value }}
+    </span>
+  </div>
+</div>

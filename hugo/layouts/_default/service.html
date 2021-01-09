@@ -1,0 +1,504 @@
+{{ define `description` -}}
+{{ .Site.Params.corporate.name.ja }}のサービスをご紹介します。
+{{- end }}
+
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="content">
+        <p>
+          {{ .Site.Params.corporate.name.ja }}は、ITとWebによる問題解決のエキスパートとして、お客様とともにビジネスの圧倒的な飛躍を目指します。<br>
+          契約形態はサービスによって、案件ごとのスポット契約または長期にわたる顧問契約のどちらかをお選びいただけます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sections">
+    <section id="assessment-and-proposal">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `IT活用診断＆提案`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `assessment-and-proposal.svg`) }}" alt="IT活用診断＆提案">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                クラウド・サービス、IoT、AIなど近年のITの発展は目覚ましいものがある一方で、SaaS (Software as a Service) に代表されるように、専門的な知識を持たずとも誰もが手軽にITを利用できる環境が整いつつあります。<br>
+                そのような環境下において、リソースに制約のある事業者が人手不足や取引形態の多様化に対応し、持続的に売上を伸ばしていくための鍵は、積極的なIT活用による生産性向上にあります。<br>
+                生産性の飛躍的な向上を実現するため、経営分析に基づいたIT活用状況の診断と改善のご提案を差し上げます。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット`) }}
+            {{ partial `tag.html` (dict `key` `特典` `value` `初回無料` `accent` true) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              組織のITの導入状況、IT化に対する戦略実現状況、スタッフの熟練度と運用状況を調査します。<br>
+              併せて貴社を取り巻く経営状況を分析し、IT活用の現状評価と課題のご報告に加えて、より一層の活用のためのプランをご提案します。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `特典`) }}
+
+          <div class="content">
+            <p>
+              初回のお申し込みに限り、無料でご利用いただけます。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="consultation">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `ITお困りごと相談`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `consultation.svg`) }}" alt="ITお困りごと相談">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                オフィス内に情報機器が溢れ、ネットワークですべてが繋がり合う昨今、ITに関するちょっとしたトラブルや疑問も尽きることがありません。<br>
+                ITに詳しいスタッフが貴社内に在籍していない場合でも、代わって当社がご相談を承り、お困りごとを解決します。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット or 顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              ITに関する日常の様々なお困りごとをトータルでカバーし、適切なサポートをご提供します。
+            </p>
+
+            <ul>
+              <li>
+                パソコンやスマートフォンの設定方法を教えてほしい。
+              </li>
+
+              <li>
+                WordやExcel、業務アプリケーション、Webサービスの使い方を教えてほしい。
+              </li>
+
+              <li>
+                要件に合わせた最適な機器やサービスを選定してほしい。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="rental-staff">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `レンタルITスタッフ`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `rental-staff.svg`) }}" alt="レンタルITスタッフ">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                パソコン、複合機、インターネット、メール、人事システムに会計ソフト。現代の組織において、ITは事業運営に欠くことのできない重要な業務基盤であるといえます。<br>
+                人材確保が難しく、専任のIT担当者を設置できない事業者様向けに、ご依頼に応じて貴社IT環境の整備を代行します。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              事務機器や情報端末、ネットワークからソフトウェアまで、煩雑なIT業務を貴社に代わって対応します。
+            </p>
+
+            <ul>
+              <li>
+                パソコンや関連機器のセットアップ
+              </li>
+
+              <li>
+                インターネットの接続設定、社内LANや無線環境などのネットワーク構築
+              </li>
+
+              <li>
+                業務アプリケーション、SaaSなど外部サービスの設定調整
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="project-support">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `ITプロジェクト支援`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `project-support.svg`) }}" alt="ITプロジェクト支援">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                複雑性を増すビジネス要件や日々進化するIT技術への対応など、高度化するITプロジェクトを成功に導くためには、開発ベンダとの強固な連携や適切なマネジメントが欠かせません。<br>
+                ビジネスとシステムの両面を理解し、プロジェクト全体を見守る支援者として、貴社とベンダの間に立ってプロジェクト推進をお手伝いします。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              プロジェクトの価値や目的、ゴールを明確にしたうえで、立ち上げから導入後まで推進支援を行います。
+            </p>
+
+            <ul>
+              <li>
+                業務分析、システム化構想
+              </li>
+
+              <li>
+                ベンダ評価/選定/連携
+              </li>
+
+              <li>
+                アーキテクチャ/実装評価
+              </li>
+
+              <li>
+                導入計画、運用設計
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="rental-cio">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `レンタルCIO`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `rental-cio.svg`) }}" alt="レンタルCIO">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                ITが企業活動の隅々にまで浸透した現代において、厳しい競争環境を勝ち抜くためには従来のコスト削減のみを目的としたシステム運用にとどまらず、ビジネス革新による新しい価値と競争力を生み出す、経営戦略レベルでのIT活用が求められています。<br>
+                一方で、このような変革の推進に主導的な役割を果たすことを期待されているCIOが備えるべき素養は幅広く、社内での育成は容易ではありません。<br>
+                ITによる経営支援に特化した当社が、貴社経営者様やIT部門責任者様のアドバイザとして戦略の策定や実行をお手伝いします。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              ヒアリングや実地調査により経営課題の特定と分析を行ったのち、経営とITの両面から戦略策定を提言します。<br>
+              策定済みの戦略に対しては、実践に際しての戦術運用支援を行います。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="department-support">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `情シス支援`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `department-support.svg`) }}" alt="情シス支援">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                従来の単純な業務効率化を超えたITの戦略的な運用が求められる中、その担い手たる情報システム部門は、コスト削減要求や事業部門へのサービス提供、ベンダのコントロールなどで日々多忙を極めています。<br>
+                情報システム部門のあるべき姿を定義し、コアとして注力すべき領域を明らかにすることにより、成長戦略に貢献する部門へのシフトを推進します。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `全業種`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット or 顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              ビジネス環境と経営戦略に基づいて、情報システム部門が果たすべき役割とコア領域を明確化します。<br>
+              併せて現状の組織体制と保有スキルを分析し、組織/人材戦略を策定します。<br>
+              社内で堅持すべき役割を切り分けつつ、ご希望に応じてノンコア業務の適正なアウトソーシング戦略の策定もお手伝いします。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="rental-cto">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `レンタルCTO`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `rental-cto.svg`) }}" alt="レンタルCTO">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                スタートアップのCTOに求められる役割やスキルは、その組織の特性や成長ステージによって様々です。<br>
+                創業期のサービス設計＆実現力から拡大期の組織化と技術統制まで、貴社が今必要としている技術マネジメント能力を必要に応じてご利用いただけます。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `Web系スタートアップ`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              貴社の現状に応じて、CTOとして期待される役務をご提供します。
+            </p>
+
+            <ul>
+              <li>
+                現在のステージに沿った、事業戦略に基づくシステム・アーキテクチャの設計
+              </li>
+
+              <li>
+                将来を見据えた先見的な技術投資とビジネスへの適用
+              </li>
+
+              <li>
+                開発チームの組織化と自律化
+              </li>
+
+              <li>
+                開発マネジメントと技術統制の確立
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="devops">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `DevOps支援`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `devops.svg`) }}" alt="DevOps支援">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                近年の目まぐるしい市場変化に対応し、他社に先駆けて顧客に価値を届けるためには、組織が一体となって自社のバリュー・ストリームを絶えず高速化し続ける必要があります。<br>
+                リーン生産方式やアジャイル、継続的デリバリの潮流から生み出されたDevOpsの文化、プラクティス、ツールの組み合わせにより、貴社のビジネスを圧倒的に加速します。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `Web系スタートアップ`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット or 顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              バリュー・ストリームの可視化を通じて、業務プロセスや組織体制の改善をお手伝いします。<br>
+              必要に応じてプラクティスやツールの導入とそれらの運用手法の習得など、技術支援を行います。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="sre">
+      <header class="section">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 2 `title` `SRE (Site Reliability Engineering) 支援`) }}
+        </div>
+      </header>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-128x128">
+                <img src="{{ partial `resource.html` (dict `file` `sre.svg`) }}" alt="SRE (Site Reliability Engineering) 支援">
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p>
+                急拡大するWebサービスの成長スピードを阻害せず、安定的な稼働と素早いサイクルでのリリースを少数の人員で実現するためにはどうしたらよいのか？<br>
+                この問いに対する答えとしてGoogle社で生まれた新しいエンジニアリングの概念と役割がSREです。<br>
+                ソフトウェア・エンジニアリングの技術と発想で、貴社サービスの運用を次のフェーズへ移行します。
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-multiline pt-5">
+            {{ partial `tag.html` (dict `key` `支援対象` `value` `Web系スタートアップ`) }}
+            {{ partial `tag.html` (dict `key` `契約形態` `value` `スポット or 顧問`) }}
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          {{ partial `h.html` (dict `size` 3 `title` `サービス内容`) }}
+
+          <div class="content">
+            <p>
+              Webサービスにおける可用性や安定性、運用上の課題に対し、対策の助言、実施支援を行います。<br>
+              貴社運用チームへのSRE知識の伝達、スキル習得支援も承ります。
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</article>
+{{ end }}

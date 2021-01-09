@@ -1,0 +1,193 @@
+{{ define `description` -}}
+{{ .Site.Params.corporate.name.ja }}のサイトご利用上の注意事項をご案内します。
+{{- end }}
+
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="content">
+        <p>
+          {{ .Site.BaseURL }} (以下 当社サイト) は、{{ .Site.Params.corporate.name.ja }} (以下 当社) によって運営、管理されています。<br>
+          当社サイトのご利用にあたっては、以下に記載する注意事項 (以下 本規約) をお読みいただき、同意のうえご利用ください。
+        </p>
+
+        <p>
+          なお、当社は本規約の内容を予告なく変更することがありますので、当社サイトのご利用に際しては最新の内容をご確認ください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `知的財産権`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社サイトに掲載されている情報の著作権、商標権その他の知的財産権は、当社または第三者が保有しており、知的財産権に関する法令等により保護されています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `推奨閲覧環境`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社サイトは以下のOSとWebブラウザの組み合わせでのご利用を推奨します。
+        </p>
+
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <table class="table is-hoverable">
+              <thead>
+                <tr>
+                  <th>
+                    OS
+                  </th>
+
+                  <th>
+                    Webブラウザ
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    macOS Big Sur
+                  </td>
+
+                  <td>
+                    Google Chrome
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Windows 10
+                  </td>
+
+                  <td>
+                    Microsoft Edge
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    Android 11
+                  </td>
+
+                  <td>
+                    Google Chrome
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `クッキー (Cookie) およびアクセス解析ツール`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社サイトでは、お客様にさらに便利で有益なサービスをご提供するために、クッキー (Cookie) およびアクセス解析ツールを使用しています。<br>
+          閲覧情報が収集、処理される仕組みについてはアクセス解析ツールを提供する事業者のサイトをご確認ください。
+        </p>
+
+        <ul>
+          <li>
+            Google アナリティクス (<a href="https://www.google.com/policies/privacy/partners/">https://www.google.com/policies/privacy/partners/</a>)
+          </li>
+        </ul>
+
+        <p>
+          なお、記録される閲覧情報には、お客様個人を識別できる情報は含まれません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の取り扱い`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社は、別途掲示する<a href="{{ relref . `/privacy` }}">個人情報保護方針</a>に基づきお客様の個人情報を取り扱うものとします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `免責事項`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社サイトは、お客様ご自身の責任においてご利用いただくものとします。
+        </p>
+
+        <ol>
+          <li>
+            当社サイトでは正確な情報を掲載すべく細心の注意を払って運営していますが、その正確性、完全性、適時性等を保証するものではありません。
+          </li>
+
+          <li>
+            当社は予告なしに、当社サイトの運営を停止し、また、掲載されている情報の全部または一部を変更することがあります。
+          </li>
+
+          <li>
+            お客様が当社サイトを利用されたこと、または利用できなかったことにより生じたいかなる損害についても、当社は一切の責任を負いません。
+          </li>
+
+          <li>
+            当社サイトから、または当社サイトへリンクを張っている第三者のWebサイトのご利用により生じたいかなる損害についても、当社は一切の責任を負いません。
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `準拠法および管轄裁判所`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社サイトのご利用および本規約の解釈は日本国の法律に準拠するものとし、紛争が生じた場合には、さいたま地方裁判所を第一審の専属管轄裁判所とします。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `お問い合わせ`) }}
+
+      <div class="content mt-6">
+        <p>
+          ご不明な点がありましたら以下のフォームよりお問い合わせください。
+        </p>
+
+        <address class="has-text-centered mt-6">
+          <a class="button is-medium is-primary is-outlined" href="{{ .Site.Params.contactUrl }}">
+            フォームから問い合わせる
+          </a>
+        </address>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

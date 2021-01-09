@@ -1,0 +1,151 @@
+{{ define `description` -}}
+{{ .Site.Params.corporate.name.ja }}の個人情報保護方針をご案内します。
+{{- end }}
+
+{{ define `main` }}
+<article>
+  {{ partial `page-header.html` (dict `title` .Title) }}
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="content">
+        <p>
+          {{ .Site.Params.corporate.name.ja }} (以下 当社) は、個人情報の重要性を認識し、個人情報を保護することが社会的責務であると考え、個人情報に関する法令等を遵守し、以下に定める当社の個人情報保護方針に従い、個人情報の取得、利用、管理において適切な保護に努めます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `適用範囲`) }}
+
+      <div class="content mt-6">
+        <p>
+          本方針は、当社が行う各種サービスにおいて、お取り引き事業者様や当社お問い合わせフォームなどからご提供いただいた個人情報もしくはそれに準ずる情報を取り扱う際に、当社が遵守する方針を示したものです。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の利用目的`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社では、取得した個人情報を以下の目的で利用します。
+        </p>
+
+        <ol>
+          <li>
+            当社のサービス、事業に関するお問い合わせの回答
+          </li>
+
+          <li>
+            当社のサービス、イベント、アンケートのご案内の送付
+          </li>
+
+          <li>
+            当社のサービス、事業に関する統計資料の作成
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の安全管理`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社は、個人情報の安全管理について、行政、公的機関の定めるガイドラインに基づき、個人データの取り扱いに係る規律の整備、物理的および技術的な安全管理措置などの対策を講じます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の第三者提供`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社は、本人の同意を得ることなく第三者への個人情報の提供は行いません。<br>
+          ただし、以下の場合は、本人の同意なしに個人情報を提供することがあります。
+        </p>
+
+        <ol>
+          <li>
+            法令に基づく場合
+          </li>
+
+          <li>
+            人の生命、身体、財産の保護に必要であって、本人の同意取得が困難な場合
+          </li>
+
+          <li>
+            公衆衛生、児童の健全育成に必要であって、本人の同意取得が困難な場合
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の取り扱い業務の委託`) }}
+
+      <div class="content mt-6">
+        <p>
+          当社は、利用目的の達成に必要な範囲内において、他の事業者へ個人情報の取り扱い業務を委託することがあります。<br>
+          この場合、当社は委託契約において、委託先に対しても本方針に沿った管理、監督を行います。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `個人情報の開示、訂正、削除など`) }}
+
+      <div class="content mt-6">
+        <p>
+          開示、訂正、削除などのお申し出があった場合には、ご本人様であることを確認のうえ対応します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{ partial `h.html` (dict `size` 2 `title` `お問い合わせ`) }}
+
+      <div class="content mt-6">
+        <p>
+          個人情報に関するお問い合わせは、お問い合わせフォームをご利用ください。
+        </p>
+
+        <address class="has-text-centered mt-6">
+          <a class="button is-medium is-primary is-outlined" href="{{ .Site.Params.contactUrl }}">
+            フォームから問い合わせる
+          </a>
+        </address>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section">
+    <div class="container has-text-right">
+      <p>
+        <time>{{ dateFormat `2006年01月02日` .Site.Params.corporate.established_at }}</time> 策定
+      </p>
+
+      <p>
+        {{ .Site.Params.corporate.name.ja }}
+      </p>
+    </div>
+  </footer>
+</article>
+{{ end }}

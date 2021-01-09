@@ -1,0 +1,324 @@
+{{ define `main` }}
+<article class="hero is-large cover-top">
+  <div class="hero-body">
+    <div class="banner p-5">
+      <div class="container">
+        <p class="title is-2 is-size-3-mobile has-text-light is-spaced">
+          ITとWebで遥かな飛躍を
+        </p>
+
+        <h1 class="subtitle is-5 is-size-6-mobile has-text-light">
+          {{ .Site.Params.corporate.name.ja }}は中小企業と個人事業主向けのIT＆Web支援に特化した<br>
+          さいたま市を拠点とするコンサルティング会社です。
+        </h1>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article>
+  <header class="section">
+    <div class="container">
+      <h2 class="title is-2 is-size-3-mobile has-text-centered">
+        サービス
+      </h2>
+    </div>
+  </header>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h3 class="title is-4 is-size-5-mobile">
+        小規模事業者様のIT人材不足をお助けします。
+      </h3>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#assessment-and-proposal` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `assessment-and-proposal.svg`) }}" alt="IT活用診断＆提案">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  IT活用診断＆提案
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  貴社の経営環境とIT活用の現状を分析し、経営課題の解決に向けた改善策をご提案します。<br>
+                  <strong>初回に限り無料でご利用いただけます。</strong>
+                </p>
+
+                <p class="is-size-5 ribbon">
+                  初回無料
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#consultation` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `consultation.svg`) }}" alt="ITお困りごと相談">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  ITお困りごと相談
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  パソコン操作のお悩みからIT活用に関するアドバイスまで、ITに関するお困りごとなら万事ご相談承ります。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#rental-staff` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `rental-staff.svg`) }}" alt="レンタルITスタッフ">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  レンタルITスタッフ
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  IT機器、ネットワーク、ソフトウェアなど、IT全般のセットアップや設定変更をまとめてお引き受けします。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h3 class="title is-4 is-size-5-mobile">
+        ITを活用してさらにビジネスを加速しませんか？
+      </h3>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#project-support` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `project-support.svg`) }}" alt="ITプロジェクト支援">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  ITプロジェクト支援
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  プロジェクト立ち上げ前の構想固めも。システム構築段階の開発ベンダとの連携も。導入後の運用設計も。すべてお任せください。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#rental-cio` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `rental-cio.svg`) }}" alt="レンタルCIO">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  レンタルCIO
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  ITの観点から経営戦略を革新する情報技術パートナーとして、戦略の策定からアクションの実施まで貴社の経営を包括的にサポートします。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#department-support` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `department-support.svg`) }}" alt="IT組織支援">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  情シス支援
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  貴社情報システム部門の一員として共に組織力の強化を目指し、ビジネスの成功に貢献する部門への変革をお手伝いします。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <h3 class="title is-4 is-size-5-mobile">
+        Webサービス開発を強く、素早く、絶え間なく。
+      </h3>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#rental-cto` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `rental-cto.svg`) }}" alt="レンタルCTO">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  レンタルCTO
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  ITを競争力の源泉として事業を展開するスタートアップ様向けに、ステージに応じた技術マネジメントをご提供します。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#devops` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `devops.svg`) }}" alt="DevOps支援">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  DevOps支援
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  開発と運用が一体となってビジネスの成功を目指すために、組織文化の醸成や連携ノウハウの習得をお手伝いします。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <div class="tile is-parent">
+          <section class="tile is-child card">
+            <a href="{{ relref . `/service#sre` }}">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="{{ partial `resource.html` (dict `file` `sre.svg`) }}" alt="SRE (Site Reliability Engineering) 支援">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <h4 class="title is-5 has-text-centered">
+                  SRE (Site Reliability Engineering) 支援
+                </h4>
+
+                <hr>
+
+                <p class="has-text-grey-dark">
+                  旧来の運用チームにソフトウェア・エンジニアリングの力をプラスして、開発速度とシステムの信頼性を両立します。
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section pt-0">
+    <div class="container">
+      <p class="has-text-centered">
+        <a class="button is-medium is-primary is-outlined" href="{{ relref . `/service` }}">
+          詳細を見る
+        </a>
+      </p>
+    </div>
+  </footer>
+</article>
+
+<article class="section cover-consultant">
+  <div class="container">
+    <h2 class="title is-2 is-size-3-mobile has-text-light has-text-centered">
+      コンサルタント
+    </h2>
+
+    <p class="has-text-centered">
+      <a class="button is-medium is-dark is-inverted is-outlined" href="{{ relref . `/consultant` }}">
+        詳細を見る
+      </a>
+    </p>
+  </div>
+</article>
+
+<article class="section">
+  <div class="container">
+    <h2 class="title is-2 is-size-3-mobile has-text-centered">
+      お問い合わせ
+    </h2>
+
+    <div class="content">
+      <p>
+        ご依頼、ご相談はお問い合わせフォームより承ります。<br>
+        お気軽にお問い合わせください。
+      </p>
+
+      <address class="has-text-centered mt-6">
+        <a class="button is-medium is-primary" href="{{ .Site.Params.contactUrl }}">
+          フォームから問い合わせる
+        </a>
+      </address>
+    </div>
+  </div>
+</article>
+{{ end }}

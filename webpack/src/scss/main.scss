@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+$color-accent: #bd5e6a;
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$primary: #58b2dc;
+$dark: #262626;
+$link: $primary;
+
+@import "~bulma/sass/utilities/derived-variables";
+
+$body-size: 14px;
+
+$title-weight: 400;
+
+$navbar-height: 4rem;
+$navbar-item-img-max-height: none;
+$navbar-background-color: rgba($scheme-main, 0.97);
+
+$hero-body-padding: 4rem 0 14rem 0;
+$hero-body-padding-large: 8rem 0 28rem 0;
+
+$footer-color: $light;
+$footer-background-color: $dark;
+
+@import "~bulma/bulma";
+
+address {
+  font-style: normal;
+}
+
+article {
+  margin-top: 4rem;
+}
+
+h2 {
+  &:not(.has-text-centered) {
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      margin-top: ($size-3 * 4 / 3);
+
+      width: 6rem;
+
+      border-top: solid 2px $primary;
+
+      @include mobile() {
+        margin-top: ($size-4 * 4 / 3);
+      }
+    }
+  }
+}
+
+h3 {
+  &:not(.has-text-centered) {
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      margin-top: ($size-4 * 4 / 3);
+
+      width: 4rem;
+
+      border-top: solid 1px $primary;
+
+      @include mobile() {
+        margin-top: ($size-5 * 4 / 3);
+      }
+    }
+  }
+}
+
+.banner {
+  background-color: rgba($dark, 0.7);
+}
+
+.card {
+  &:hover {
+    background-color: rgba($dark, 0.03);
+  }
+}
+
+.card-image {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.cover-consultant {
+  background-color: $dark;
+  background-image: url("{{ partial `resource.html` (dict `file` `consultant-gray.jpg`) }}");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  & h2 {
+    padding-bottom: 18rem;
+  }
+}
+
+.cover-consultant-detail {
+  background-color: $dark;
+  background-image: url("{{ partial `resource.html` (dict `file` `consultant-mono.jpg`) }}");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 36rem;
+}
+
+.cover-top {
+  background-image: url("{{ partial `resource.html` (dict `file` `hero.svg`) }}");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  & a {
+    color: $footer-color;
+
+    &:hover {
+      color: $link;
+    }
+  }
+}
+
+.logo {
+  width: 140px;
+}
+
+.navbar {
+  &.is-fixed-top {
+    @media print {
+      position: static;
+    }
+  }
+}
+
+.navbar-item {
+  &.is-tab {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.ribbon {
+  position: absolute;
+
+  top: 2.5rem;
+  right: -6rem;
+
+  width: 20rem;
+  height: 3rem;
+
+  line-height: 3rem;
+
+  text-align: center;
+
+  transform: rotate(45deg);
+
+  color: $light;
+  background-color: $color-accent;
+}
+
+.sections {
+  & > section {
+    &:nth-child(odd) {
+      background-color: rgba($dark, 0.03);
+    }
+  }
+}
+
+.tag {
+  &.is-accent {
+    color: $light;
+    background-color: $color-accent;
+  }
+}
+
+.zip-code {
+  &::before {
+    content: "〒";
+  }
+}
