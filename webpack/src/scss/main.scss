@@ -84,6 +84,8 @@ h3 {
 }
 
 .card {
+  overflow: hidden;
+
   &:hover {
     background-color: rgba($dark, 0.03);
   }
