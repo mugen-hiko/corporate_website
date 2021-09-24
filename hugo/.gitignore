@@ -1,4 +1,5 @@
-/assets/
+/assets/*.css
+/assets/*.js
 /bin/
 /public/
 /resources/

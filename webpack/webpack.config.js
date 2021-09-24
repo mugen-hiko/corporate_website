@@ -11,8 +11,7 @@ module.exports = (env, argv) => {
     ],
     output: {
       path: path.resolve(__dirname, '../hugo/assets'),
-      filename: '[name].js',
-      assetModuleFilename: (pathData, _) => path.relative('src/img', pathData.filename)
+      filename: '[name].js'
     },
     devtool: (isDevelop ? 'inline-source-map' : false),
     plugins: [
@@ -65,10 +64,6 @@ module.exports = (env, argv) => {
               }
             }
           ]
-        },
-        {
-          test: /\.(ico|jpe?g|png|gif|svg)$/i,
-          type: 'asset/resource'
         }
       ]
     }

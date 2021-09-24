@@ -3,12 +3,12 @@
 $color-accent: #bd5e6a;
 
 @import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
 
 $primary: #58b2dc;
 $dark: #262626;
 $link: $primary;
 
+@import "~bulma/sass/utilities/functions";
 @import "~bulma/sass/utilities/derived-variables";
 
 $body-size: 14px;

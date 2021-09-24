@@ -13,4 +13,4 @@ build: clean
 	npm run build
 
 clean:
-	rm -rf ../hugo/assets/
+	rm -f ../hugo/assets/*.{css,js}
