@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.16.0",
     "babel-loader": "^8.2.3",
     "bulma": "^0.9.3",
-    "css-loader": "^6.4.0",
+    "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.4.3",
     "node-sass": "^6.0.1",
     "postcss": "^8.3.11",
