@@ -15,7 +15,7 @@
     "babel-loader": "^8.2.3",
     "bulma": "^0.9.3",
     "css-loader": "^6.5.1",
-    "mini-css-extract-plugin": "^2.4.6",
+    "mini-css-extract-plugin": "^2.4.7",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
