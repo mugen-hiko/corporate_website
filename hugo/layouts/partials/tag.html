@@ -4,7 +4,7 @@
       {{ .key }}
     </span>
 
-    <span class="tag {{ cond (eq .accent true) `is-accent` `is-primary` }}">
+    <span class="tag has-text-light {{ cond (eq .accent true) `is-accent` `is-primary` }}">
       {{ .value }}
     </span>
   </div>

@@ -1,9 +1,9 @@
-version = 0.80.0
-platform = macOS-64bit
+version = 0.125.4
+platform = darwin-universal
 
 hugo = ./bin/hugo
 
-opt = --minify --gc --debug
+opt = --minify --gc --logLevel 'debug'
 
 help:
 	: TODO

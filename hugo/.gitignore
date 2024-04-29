@@ -1,3 +1,4 @@
+/.hugo_build.lock
 /assets/*.css
 /assets/*.js
 /bin/

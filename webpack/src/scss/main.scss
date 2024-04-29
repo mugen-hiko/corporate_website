@@ -2,30 +2,33 @@
 
 $color-accent: #bd5e6a;
 
-@import "~bulma/sass/utilities/initial-variables";
+@use "~bulma/sass" as bulma with (
+  $primary: #58b2dc,
+  $dark: #262626,
+  $link: #58b2dc,
 
-$primary: #58b2dc;
-$dark: #262626;
-$link: $primary;
+  $body-size: 14px,
 
-@import "~bulma/sass/utilities/functions";
-@import "~bulma/sass/utilities/derived-variables";
+  $title-weight: 400,
 
-$body-size: 14px;
+  $navbar-height: 4rem,
+  $navbar-item-img-max-height: none,
 
-$title-weight: 400;
+  $hero-body-padding: 4rem 0 14rem 0,
+  $hero-body-padding-large: 8rem 0 28rem 0
+);
 
-$navbar-height: 4rem;
-$navbar-item-img-max-height: none;
-$navbar-background-color: rgba($scheme-main, 0.97);
+@use "~bulma/sass/utilities/mixins";
 
-$hero-body-padding: 4rem 0 14rem 0;
-$hero-body-padding-large: 8rem 0 28rem 0;
+a {
+  &.navbar-item {
+    &:hover {
+      color: bulma.$link;
 
-$footer-color: $light;
-$footer-background-color: $dark;
-
-@import "~bulma/bulma";
+      background-color: transparent;
+    }
+  }
+}
 
 address {
   font-style: normal;
@@ -44,14 +47,14 @@ h2 {
 
       left: 0;
 
-      margin-top: ($size-3 * 4 / 3);
+      margin-top: calc(bulma.$size-3 * 4 / 3);
 
       width: 6rem;
 
-      border-top: solid 2px $primary;
+      border-top: solid 2px bulma.$primary;
 
-      @include mobile() {
-        margin-top: ($size-4 * 4 / 3);
+      @include mixins.mobile {
+        margin-top: calc(bulma.$size-4 * 4 / 3);
       }
     }
   }
@@ -66,28 +69,28 @@ h3 {
 
       left: 0;
 
-      margin-top: ($size-4 * 4 / 3);
+      margin-top: calc(bulma.$size-4 * 4 / 3);
 
       width: 4rem;
 
-      border-top: solid 1px $primary;
+      border-top: solid 1px bulma.$primary;
 
-      @include mobile() {
-        margin-top: ($size-5 * 4 / 3);
+      @include mixins.mobile {
+        margin-top: calc(bulma.$size-5 * 4 / 3);
       }
     }
   }
 }
 
 .banner {
-  background-color: rgba($dark, 0.7);
+  background-color: rgba(bulma.$dark, 0.7);
 }
 
 .card {
   overflow: hidden;
 
   &:hover {
-    background-color: rgba($dark, 0.03);
+    background-color: rgba(bulma.$dark, 0.03);
   }
 }
 
@@ -96,8 +99,14 @@ h3 {
   padding-right: 25%;
 }
 
+.content {
+  a {
+    color: bulma.$link;
+  }
+}
+
 .cover-consultant {
-  background-color: $dark;
+  background-color: bulma.$dark;
   background-image: url("{{ partial `resource.html` (dict `file` `consultant-gray.jpg`) }}");
   background-position: center center;
   background-repeat: no-repeat;
@@ -109,7 +118,7 @@ h3 {
 }
 
 .cover-consultant-detail {
-  background-color: $dark;
+  background-color: bulma.$dark;
   background-image: url("{{ partial `resource.html` (dict `file` `consultant-mono.jpg`) }}");
   background-position: center center;
   background-repeat: no-repeat;
@@ -126,11 +135,14 @@ h3 {
 }
 
 .footer {
+  color: bulma.$light;
+  background-color: bulma.$dark;
+
   & a {
-    color: $footer-color;
+    color: bulma.$light;
 
     &:hover {
-      color: $link;
+      color: bulma.$link;
     }
   }
 }
@@ -140,6 +152,8 @@ h3 {
 }
 
 .navbar {
+  background-color: rgba(bulma.$scheme-main, 0.97);
+
   &.is-fixed-top {
     @media print {
       position: static;
@@ -169,21 +183,21 @@ h3 {
 
   transform: rotate(45deg);
 
-  color: $light;
+  color: bulma.$light;
   background-color: $color-accent;
 }
 
 .sections {
   & > section {
     &:nth-child(odd) {
-      background-color: rgba($dark, 0.03);
+      background-color: rgba(bulma.$dark, 0.03);
     }
   }
 }
 
 .tag {
   &.is-accent {
-    color: $light;
+    color: bulma.$light;
     background-color: $color-accent;
   }
 }
