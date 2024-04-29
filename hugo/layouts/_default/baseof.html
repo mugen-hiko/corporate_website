@@ -1,5 +1,5 @@
 <!doctype html>
-<html prefix="og: https://ogp.me/ns#">
+<html data-theme="light" prefix="og: https://ogp.me/ns#">
 
 <head>
   {{ $subtitle := `さいたま市のIT＆Webコンサルティング` }}
@@ -47,10 +47,11 @@
             <img class="logo" src="{{ partial `resource.html` (dict `file` `logo.svg`) }}" alt="{{ .Site.Params.corporate.name.ja }}">
           </a>
 
-          <a class="navbar-burger" data-target="navMenu">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
         </div>
 
@@ -108,7 +109,7 @@
 
       <p class="has-text-centered">
         <small>
-          &copy; 2017-2023 {{ .Site.Params.corporate.name.en }}
+          &copy; 2017-2024 {{ .Site.Params.corporate.name.en }}
         </small>
       </p>
     </div>

@@ -1,6 +1,6 @@
 [build]
-  command = 'make setup hugo_opt="platform=Linux-64bit" && make build'
+  command = 'make setup hugo_opt="platform=linux-amd64" && make build'
   publish = './hugo/public/'
 
 [build.environment]
-  NODE_VERSION = '14'
+  NODE_VERSION = '20'
